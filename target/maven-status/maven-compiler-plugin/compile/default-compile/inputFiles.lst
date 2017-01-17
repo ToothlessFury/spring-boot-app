@@ -1,0 +1,13 @@
+/home/jack/Dropbox/Projects/Java/SpringTermWork/src/main/java/cz/cvut/fit/zatlodan/app/App.java
+/home/jack/Dropbox/Projects/Java/SpringTermWork/src/main/java/cz/cvut/fit/zatlodan/models/Sale.java
+/home/jack/Dropbox/Projects/Java/SpringTermWork/src/main/java/cz/cvut/fit/zatlodan/controllers/Web/SalesWebController.java
+/home/jack/Dropbox/Projects/Java/SpringTermWork/src/main/java/cz/cvut/fit/zatlodan/models/Customer.java
+/home/jack/Dropbox/Projects/Java/SpringTermWork/src/main/java/cz/cvut/fit/zatlodan/app/Server.java
+/home/jack/Dropbox/Projects/Java/SpringTermWork/src/main/java/cz/cvut/fit/zatlodan/controllers/REST/CustomersRestController.java
+/home/jack/Dropbox/Projects/Java/SpringTermWork/src/main/java/cz/cvut/fit/zatlodan/controllers/Web/IndexController.java
+/home/jack/Dropbox/Projects/Java/SpringTermWork/src/main/java/cz/cvut/fit/zatlodan/routing/Routes.java
+/home/jack/Dropbox/Projects/Java/SpringTermWork/src/main/java/cz/cvut/fit/zatlodan/controllers/Web/CustomersWebController.java
+/home/jack/Dropbox/Projects/Java/SpringTermWork/src/main/java/cz/cvut/fit/zatlodan/repositories/CustomersRepository.java
+/home/jack/Dropbox/Projects/Java/SpringTermWork/src/main/java/cz/cvut/fit/zatlodan/controllers/Web/ErrorHandler.java
+/home/jack/Dropbox/Projects/Java/SpringTermWork/src/main/java/cz/cvut/fit/zatlodan/controllers/REST/SalesRestController.java
+/home/jack/Dropbox/Projects/Java/SpringTermWork/src/main/java/cz/cvut/fit/zatlodan/repositories/SalesRepository.java

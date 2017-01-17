@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{> partials/header}}
+</head>
+<body>
+<div class="container-fluid" style="text-align: center">
+    <div class="row">
+        <div class="jumbotron">
+            <h1>TJV Spring Termwork</h1>
+            <p>This page contains links to customers and their sales.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-heading">Available links:</div>
+            <div class="panel-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <a href="{{basePath}}/customers"><h2>Customers</h2></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <a href="{{basePath}}/sales"><h2>Sales</h2></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    {{>partials/header}}
+</head>
+<body>
+<div class="container-fluid" style="padding-bottom: 30px;">
+    <div class="row">
+        <table class="table table-striped">
+            <tr>
+                <td>
+                    Info
+                </td>
+                <td>
+                    Date
+                </td>
+                <td>
+                    Status
+                </td>
+                <td>
+                    Customer ID
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            {{#sales}}
+            <tr>
+                {{#info}}
+                <td>{{info}}</td>
+                {{/info}}
+                <td>{{date}}</td>
+                <td>
+                    <div class="btn status-button status-button-{{done}}"></div>
+                </td>
+                <td>{{customersId}}</td>
+                <td>
+                    <a href="{{basePath}}/sales/delete/{{id}}">
+                        <button class="btn btn-danger">Delete</button>
+                    </a>
+                </td>
+                <td>
+                    <a href="{{basePath}}/sales/update/{{id}}">
+                        <button class="btn btn-default">Update</button>
+                    </a>
+                </td>
+                <td>
+                    <a href="{{basePath}}/sales/{{id}}">
+                        <button class="btn btn-info">Details</button>
+                    </a>
+                </td>
+            </tr>
+            {{/sales}}
+        </table>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            <a href="{{basePath}}/sales/create">
+                <button class="btn btn-primary" style="width: 200px;">Create</button>
+            </a>
+        </div>
+        <div class="col-sm-2">
+            <a href="{{basePath}}/">
+                <button class="btn btn-default" style="width: 200px;">Return to Index</button>
+            </a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

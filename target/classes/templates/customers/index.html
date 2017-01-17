@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>partials/header}}
+</head>
+<body>
+<div class="container-fluid" style="padding-bottom: 30px;">
+    <table class="table table-striped">
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        {{#customers}}
+        <tr>
+            <td>
+                {{id}}
+            </td>
+            <td>
+                {{name}}
+            </td>
+            <td>
+                <a href="{{basePath}}/customers/delete/{{id}}">
+                    <button class="btn btn-danger">Delete</button>
+                </a>
+            </td>
+            <td>
+                <a href="{{basePath}}/customers/update/{{id}}">
+                    <button class="btn btn-default">Update</button>
+                </a>
+            </td>
+            <td>
+                <a href="{{basePath}}/customers/{{id}}">
+                    <button class="btn btn-info">Details</button>
+                </a>
+            </td>
+        </tr>
+        {{/customers}}
+    </table>
+    <div class="row">
+        <div class="col-sm-2">
+            <a href="{{basePath}}/customers/create">
+                <button class="btn btn-primary" style="width: 200px;">Create</button>
+            </a>
+        </div>
+        <div class="col-sm-2">
+            <a href="{{basePath}}/">
+                <button class="btn btn-default" style="width: 200px;">Return to Index</button>
+            </a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>partials/header}}
+</head>
+<body>
+<div class="container">
+    {{#customer}}
+    <div class="panel-group">
+        <div class="panel panel-danger">
+            <div class="panel-heading">You are about to delete:</div>
+            <div class="panel-body">
+                <table class="table">
+                    <tr>
+                        <td>ID</td>
+                        <td>Name</td>
+                        <td>Address</td>
+                    </tr>
+                    {{#customer}}
+                    <tr>
+                        <td>{{id}}</td>
+                        <td>{{name}}</td>
+                        <td>{{address}}</td>
+                    </tr>
+                    {{/customer}}
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <form method="POST" action="{{basePath}}/customers/delete">
+                <a href="{{basePath}}/customers" class="btn btn-default">Cancel</a>
+                <input type="hidden" value="{{id}}" name="id">
+                <button class="btn btn-success" type="submit">Confirm</button>
+            </form>
+        </div>
+    </div>
+    {{/customer}}
+
+</div>
+</body>
+</html>

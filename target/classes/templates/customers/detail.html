@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{> partials/header}}
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="panel-group">
+            <div class="panel panel-primary">
+                <div class="panel-heading">Customer data:</div>
+                <div class="panel-body">
+                    <table class="table">
+                        <tr>
+                            <td>
+                                ID
+                            </td>
+                            <td>
+                                Name
+                            </td>
+                            <td>
+                                Email Address
+                            </td>
+                            <td>
+                                Address
+                            </td>
+                            <td>
+                                Contact
+                            </td>
+                        </tr>
+                        {{#customer}}
+                        <tr>
+                            <td>
+                                {{id}}
+                            </td>
+                            <td>
+                                {{name}}
+                            </td>
+                            <td>
+                                {{#emailAddress}}
+                                {{emailAddress}}
+                                {{/emailAddress}}
+                            </td>
+                            <td>
+                                {{address}}
+                            </td>
+                            {{#contact}}
+                            <td>
+                                {{contact}}
+                            </td>
+                            {{/contact}}
+                        </tr>
+                        {{/customer}}
+                    </table>
+                    {{#customer}}
+                </div>
+            </div>
+        </div>
+        {{#sales.0}}
+        <div class="panel panel-info">
+            <div class="panel-heading">Customer sales:</div>
+            <div class="panel-body">
+                <table class="table">
+
+                    <tr>
+                        <td>
+                            ID
+                        </td>
+                        <td>
+                            Info
+                        </td>
+                        <td>
+                            Date
+                        </td>
+                    </tr>
+                    {{#sales}}
+                    <tr>
+                        <td>
+                            <a href="{{basePath}}/sales/{{id}}">{{id}}</a>
+                        </td>
+                        <td>
+                            {{info}}
+                        </td>
+                        <td>
+                            {{date}}
+                        </td>
+                    </tr>
+                    {{/sales}}
+                </table>
+            </div>
+        </div>
+        {{/sales.0}}
+        {{/customer}}
+        <div class="row" style="text-align: center">
+            <div class="col-sm-12">
+                <a href="{{basePath}}/customers" class="btn btn-default" style="width: 150px">All customers</a>
+                <a href="{{backLink}}" class="btn btn-default" style="width: 150px">Back</a>
+                {{#customer}}
+                <a href="{{basePath}}/customers/update/{{id}}" class="btn btn-primary" style="width: 150px">Update</a>
+                <a href="{{basePath}}/customers/delete/{{id}}" class="btn btn-danger" style="width: 150px">Delete</a>
+                {{/customer}}
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

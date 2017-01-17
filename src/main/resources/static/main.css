@@ -1,0 +1,46 @@
+.status-button{
+    min-width: 130px;
+}
+
+.status-button:hover{
+    color:white;
+}
+
+.status-button-0 {
+    background-color: rgba(9, 171, 0, 0.59);
+    color: white;
+    border: 1px solid rgba(184,184,184,0.85);
+    border-radius: 5%;
+}
+
+.status-button-0:before {
+    content: "Done";
+}
+
+.status-button-1 {
+    background-color: rgba(167,167,179,0.17);
+    border: 1px solid #c4c4c4;
+    border-radius: 5%;
+}
+
+.status-button-1:hover{
+    background: rgba(106,106,106,0.23);
+}
+
+.status-button-1:before {
+    content: "Pending";
+}
+
+.status-button-2 {
+    background-color: #d9534f;
+    color: white;
+}
+
+.status-button-2:hover {
+    background-color: rgba(250, 189, 46, 0.85);
+    color: white;
+}
+
+.status-button-2:before {
+    content: "Cancelled";
+}

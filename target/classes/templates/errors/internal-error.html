@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{> partials/header}}
+</head>
+<body>
+<div class="alert alert-danger">
+    <strong><h1>Error</h1></strong> Internal server error has occured.
+</div>
+<div class="panel-group">
+    <div class="panel panel-danger">
+        <div class="panel-body" style="font-size: 20px"><b>{{errorMessage}}</b></div>
+    </div>
+</div>
+<div class="alert alert-warning">
+    <h3>Url: {{url}}</h3>
+    <h2>Stack Trace:</h2>
+    <div class="panel panel-default">
+        <div class="panel-body">{{stackTrace}}</div>
+    </div>
+</div>
+</body>
+</html>

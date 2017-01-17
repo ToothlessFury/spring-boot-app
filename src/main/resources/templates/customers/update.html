@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>partials/header}}
+</head>
+<body>
+<div class="container" style="max-width: 600px;">
+    {{#item}}
+    <form method="POST" action="{{basePath}}/customers/update">
+        <div class="row">
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label for="id">ID:</label>
+                            <input readonly type="number" id="id" name="id" value="{{id}}" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" value="{{name}}" class="form-control">
+                        </div>
+                        {{#emailAddress}}
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="emailAddress" value="{{emailAddress}}"
+                                   class="form-control">
+                        </div>
+                        {{/emailAddress}}
+                        <div class="form-group">
+                            <label for="addr">Address:</label>
+                            <input type="text" id="addr" name="address" value="{{address}}" class="form-control">
+                        </div>
+                        {{#contact}}
+                        <div class="form-group">
+                            <label for="cont">Contact:</label>
+                            <input type="text" id="cont" name="contact" value="{{contact}}" class="form-control">
+                        </div>
+                        {{/contact}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div style="text-align: center">
+                <div style="display: inline-block">
+                    <button class="btn btn-success" type="submit" style="width: 130px">Update</button>
+                </div>
+                <div style="margin-top: 20px;">
+                    <a href="{{backLink}}" class="btn btn-default" style="width: 130px">Return</a>
+                </div>
+            </div>
+        </div>
+    </form>
+    {{/item}}
+</div>
+</body>
+</html>
